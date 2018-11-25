@@ -1,0 +1,70 @@
+{% include "header.html" %}
+
+
+  <!--top nav-->
+  {% include "topnav.html" %}
+   <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="description">
+				<h2 class="title3">Add New Item</h2>
+				<hr class="style1">
+
+        <form action="#" method = 'POST'>
+				
+        <h4 class="category">Title</h4>
+        <input type="text" name="title" size="30">
+      
+        <h4 class="category">Description</h4>
+        <textarea name="description" cols="20" rows="5"></textarea>
+
+        <h4 class="category">Image Link</h4>
+        <input type="text" name="picture" size="30">
+
+        <h4 class="category">Store Link</h4>
+        <input type="text" name="link" size="30">
+
+        <h4 class="category">Category</h4>
+        <select name="category" placeholder="Select category">
+        <option value ='Action' >Action</option>
+        <option value ='Adventure' >Adventure</option>
+        <option value ='Casual' >Casual</option>
+        <option value ='MMO' >MMO</option>
+        <option value ='Racing' >Racing</option>
+        <option value ='RPG' >RPG</option>
+        <option value ='Simulation' >Simulation</option>
+        <option value ='Sports' >Sports</option>
+        <option value ='Strategy' >Strategy</option>
+      </select>
+
+      <h4 class="category">Home Page pic</h4>
+        <input type="text" name="cover_pic" size="30">
+        
+    <div class="bd">
+    <input class="btn btn-primary btn-custom" type='submit' value='Add'>
+    <input class="btn btn-light" type='submit' value='Cancel'>
+    </div>
+
+    
+				</form>
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	
+	<!--jquery-->
+<script src="js/jquery/jquery.js"></script>
+
+<!-- bootstrap JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- custom JS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>

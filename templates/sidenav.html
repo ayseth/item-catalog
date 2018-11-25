@@ -1,0 +1,56 @@
+<div class="container-fluid">
+	<div class="row">
+		<nav class="col=md-2 d-none d-md-block bg-custom sidebar">
+      <div class="sidebar-sticky">
+        <div class="title1">
+        <a>Categories</a>
+      </div>
+            <ul class="nav flex-column">
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Action')}}">
+                  Action
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Adventure')}}">
+                  Adventure
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Casual')}}">
+                  Casual
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'MMO')}}">
+                  MMO(Massively Multiplayer)
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Racing')}}">
+                  Racing
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'RPG')}}">
+                  RPG(Role Playing)
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Simulation')}}">
+                  Simulation
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Sports')}}">
+                  Sports
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a class="nav-link nav-border" href="{{url_for('showitems', catalog_category = 'Strategy')}}">
+                  Strategy
+                </a>
+              </li>
+            </ul>
+          </div>
+    </nav>

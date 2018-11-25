@@ -1,0 +1,56 @@
+{% include "header.html" %}
+
+
+  <!--top nav-->
+  {% include "topnav.html" %}
+   <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="description">
+         {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        
+        
+        {% for message in messages %}
+          
+          <div class="alert alert-success" role="alert">
+            {{message}}
+          </div>
+        
+          {% endfor %}
+        
+        {% endif %}
+        {% endwith %}
+
+        {% for i in displaycontent %}
+
+				<h2 class="title3">{{i.title}}</h2>
+				<hr class="style1">
+				<h4>Description</h4>
+        <p>{{i.description}}</p>
+        <a href="{{i.link}}">
+        <img src="{{i.picture}}" alt="game-img" ></a>
+        <br><br>
+        <a href="{{url_for('edititem', catalog_title = i.title)}}">Edit</a> |
+      <a href="{{url_for('deleteitem', catalog_title = i.title)}}">Delete</a>
+			</div>
+      {% endfor %}
+		</div>
+	</div>
+</div> 
+
+
+	
+	<!--jquery-->
+<script src="js/jquery/jquery.js"></script>
+
+<!-- bootstrap JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- custom JS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+
+  <!--top nav-->
+  {% include "topnav.html" %}
+   <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="greyed">
+      	<h2 class="title3">Are you sure you want to delete {{item.title}}?</h2>
+        
+				<div class="bd">
+          <form action="#" method = 'POST'>
+    <input class="btn btn-primary btn-custom" type='submit' value='Delete'>
+    
+  </form>
+  <a class="btn btn-light" href="{{url_for('showitem', catalog_category = item.category, catalog_title=item.title)}}">Cancel</a>
+    </div>
+				
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	
+	<!--jquery-->
+<script src="js/jquery/jquery.js"></script>
+
+<!-- bootstrap JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- custom JS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>

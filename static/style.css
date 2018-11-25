@@ -1,0 +1,235 @@
+/*general*/
+
+html, body {
+  height: 100%;
+}
+
+}
+body {
+   font-family: 'Montserrat', sans-serif;
+   background-color: #efefef
+}
+p {
+  color: #6a6a6a;
+  font-size: 16px;
+  font-weight: 300;
+  
+}
+
+h3 {
+  color: #6a6c60;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 700;
+  color: #49516F;
+}
+h4 {
+  color: #49516F;
+}
+/*nav bar top*/
+.navbar-light .navbar-nav .nav-link {
+    color: #E4C2C6;
+}
+.navbar-light .navbar-brand {
+  margin-right: 90px;
+    color: #CD9FCC;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+.bg-light {
+    background-color: #49516F!important;
+}
+.navbar-nav {
+  float: right;
+}
+.navbar {
+  padding: 1rem 5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1
+}
+.btn-light {
+    color: #49516F;
+  }
+.navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+    color: #CD9FCC;
+}
+.navbar-light .navbar-nav .nav-link:hover
+{
+  text-decoration: underline;
+  color: #E4C2C6;
+}
+.space {
+  margin-right: 18px;
+}
+/*sidebar*/
+.sidebar-sticky {
+    position: sticky;
+}
+.sidebar-sticky {
+    position: fixed;
+    top: 60px;
+    height: calc(100vh - 90px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 225px;
+    background-color: #f7e8ea;
+
+}
+.bg-custom {
+  background-color: #f7e8ea;
+  width: 225px;
+  font-size: 20px;
+  margin-top: 72px;
+}
+a {
+  color: #49516F
+}
+
+ul.flex-column li {
+    border-bottom: solid;
+    border-color: #e4c2c663;
+    font-size: 1rem;
+    padding: 10px;
+  }
+.title1 {
+  text-align: center;
+  margin: 25px;
+  font-weight: bold;
+
+}
+ul.flex-column li:hover {
+  background-color: #E4C2C6;
+  color: #49516F;
+  
+}
+nav .flex-column a:hover {
+  color:#49516F;
+}
+/*body*/
+.greyed {
+ 
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    padding-top: 25px;
+    padding-left: 12px;
+    height: auto;
+    padding-bottom: 50px;
+
+}
+.bg-custom2 {
+    background-color: #fff;
+    /* width: 15em; */
+    margin-top: 88px;
+    margin-right: 10px;
+    margin-left: 16px;
+    border: solid 1px;
+    border-color: #ddd;
+}
+.title3 {
+  text-align: left;
+}
+hr.style1 {
+  height: 6px;
+  background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+  border: 0;
+}
+.greyed h4 ,.greyed p {
+  cursor: pointer;
+  display: inline;
+}
+.greyed p {
+  font-style: italic;
+}
+.greyed h4:hover , .greyed p:hover {
+  text-decoration: underline;
+}
+.greyed ul{
+  display: contents;
+}
+.greyed li {
+  display: block;
+  margin-bottom: 10px;
+} 
+.extra {
+  float: right;
+}
+.extra h4 {
+  color: #CD9FCC;
+}
+.extra h4:hover {
+  color: #49516F;
+}
+.extra i {
+      font-size: 19px;
+    padding: 5px;
+}
+/*description*/
+.description {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding-top: 25px;
+    padding-left: 12px;
+    padding-bottom: 50px;
+}
+form {
+  display: inline-grid;
+}
+.catagory {
+  padding-top: 25px;
+}
+.btn-custom {
+  background-color: #CD9FCC;
+  border-color: transparent;
+  color: #49516F;
+  width: 83px;
+
+}
+.btn-custom:hover {
+  background-color: #49516F;
+  color: #fff;
+  border-color: transparent;
+}
+.bd {
+  position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0; 
+    text-align: center;
+}
+a:hover {
+  color: #CD9FCC;
+}
+
+
+.centered-form {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 25.6em;
+}
+.btn-custom3 {
+  background-color: #CD9FCC;
+  border-color: transparent;
+  color: #49516F;
+
+}
+.btn-custom3:hover {
+  background-color: #49516F;
+  color: #fff;
+  border-color: transparent;
+}
+

@@ -1,0 +1,122 @@
+{% include "header.html" %}
+
+
+  <!--top nav-->
+  {% include "topnav.html" %}
+   <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="description">
+				<h2 class="title3">Edit Item</h2>
+				<hr class="style1">
+
+        <form action="#" method = 'POST'>
+				
+        <h4 class="catagory">Title</h4>
+        <input type="text" name="title" size="30" value="{{item.title}}">
+      
+        <h4 class="catagory">Description</h4>
+        <textarea name="description" cols="50" rows="20" style="width: 600px;" >{{item.description}}</textarea>
+
+        <h4 class="catagory">Catagory</h4>
+        <select name='category'>
+
+        {%if item.category == 'Action' %}
+        <option value ='Action' selected>Action</option>
+        {%else%}
+        <option value ='Action'>Action</option>
+        {% endif %}
+
+        {%if item.category == 'Adventure' %}
+        <option value ='Adventure' selected>Adventure</option>
+        {%else%}
+        <option value ='Adventure'>Adventure</option>
+        {% endif %}
+
+        {%if item.category == 'Casual' %}
+        <option value ='Casual' selected>Casual</option>
+        {%else%}
+        <option value ='Casual' >Casual</option>
+        {% endif %}
+
+        {%if item.category == 'MMO' %}
+        <option value ='MMO' selected>MMO</option>
+        {%else%}
+        <option value ='MMO' >MMO</option>
+        {% endif %}
+
+        {%if item.category == 'Racing' %}
+        <option value ='Racing' selected>Racing</option>
+        {%else%}
+        <option value ='Racing' >Racing</option>
+        {% endif %}
+
+
+        {%if item.category == 'RPGg' %}
+        <option value ='RPG' selected>RPG</option>
+        {%else%}
+        <option value ='RPG' >RPG</option>
+        {% endif %}
+
+
+        {%if item.category == 'Simulation' %}
+        <option value ='Simulation' selected>Simulation</option>
+        {%else%}
+        <option value ='Simulation' >Simulation</option>
+        {% endif %}
+
+
+        {%if item.category == 'Sports' %}
+        <option value ='Sports' selected>Sports</option>
+        {%else%}
+        <option value ='Sports' >Sports</option>
+        {% endif %}
+
+
+        {%if item.category == 'Strategy' %}
+        <option value ='Strategy' selected>Strategy</option>
+        {%else%}
+        <option value ='Strategy' >Strategy</option>
+        {% endif %}
+
+
+      </select>
+
+       <h4 class="catagory">Item Image</h4>
+        <input type="text" name="picture" size="30" value="{{item.picture}}">
+      
+       <h4 class="catagory">Store Link</h4>
+        <input type="text" name="link" size="30" value="{{item.link}}">
+
+        <h4 class="catagory">Home Page pic</h4>
+        <input type="text" name="cover_pic" size="30" value="{{item.cover_pic}}">
+      
+      
+      <div class="bd">
+    <input class="btn btn-primary btn-custom" type='submit' value='Edit'>
+    </form>
+
+    
+<a class="btn btn-light" href="{{url_for('showitem', catalog_category = item.category, catalog_title=item.title)}}">Cancel</a>
+    </div>
+				
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	
+	<!--jquery-->
+<script src="js/jquery/jquery.js"></script>
+
+<!-- bootstrap JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<!-- custom JS -->
+<script src="js/custom.js"></script>
+
+</body>
+</html>
