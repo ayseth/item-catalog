@@ -19,7 +19,7 @@ def showcatalogJSON():
 @app.route('/')
 @app.route('/catalog/')
 def showcatalog():
-	catalogs=session.query(catalog).order_by("catalog.id desc").limit(10)
+	catalogs=session.query(catalog).order_by("catalog.id desc").limit(5)
 	return render_template('catalog.html', catalogs = catalogs)
 	# return "displays Latest items"
 

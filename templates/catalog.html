@@ -10,9 +10,9 @@
 <!--Sidenav end-->
 		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
 			<div class="greyed">
-        <li class="extra">
-        <h4><a href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
-        </li>
+        
+        <h4><a class="extra" href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
+        
 				<h2 class="title3">Latest Items</h2>
 				<hr class="style1">
 
@@ -51,13 +51,4 @@
 
 
 	
-	<!--jquery-->
-<script src="js/jquery/jquery.js"></script>
-
-<!-- bootstrap JS -->
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<!-- custom JS -->
-<script src="js/custom.js"></script>
-
-</body>
-</html>
+{% include "footer.html" %}
