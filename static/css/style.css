@@ -44,6 +44,8 @@ h4 {
     color: #CD9FCC;
     font-family: 'Cinzel', serif;
     font-weight: 600;
+    font-size: 34px;
+    padding: 0;
 }
 .bg-light {
     background-color: #49516F!important;
@@ -78,7 +80,7 @@ h4 {
 }
 .sidebar-sticky {
     position: fixed;
-    top: 60px;
+    top: 80px;
     height: calc(100vh - 50px);
     padding-top: .5rem;
     overflow-x: hidden;
@@ -138,7 +140,7 @@ nav .flex-column a:hover {
 .bg-custom2 {
     background-color: #fff;
     /* width: 15em; */
-    margin-top: 88px;
+    margin-top: 100px;
     margin-right: 10px;
     margin-left: 16px;
     border: solid 1px;
