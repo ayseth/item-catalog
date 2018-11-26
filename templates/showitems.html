@@ -10,9 +10,9 @@
 <!--Sidenav end-->
 		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
 			<div class="greyed">
-          <li class="extra">
-        <h4><a href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
-        </li>
+          
+        <h4><a class="extra" href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
+        
          {% with messages = get_flashed_messages() %}
         {% if messages %}
         
@@ -34,6 +34,9 @@
           {% for i in listcatalogs %}
 				<li>
 				<h4><a href="{{url_for('showitem', catalog_category = i.category, catalog_title=i.title)}}">{{i.title}}</a></h4>
+
+        <p><a class= "right-img" href="{{url_for('showitem', catalog_category = i.category, catalog_title=i.title)}}">
+          <img src="{{i.cover_pic}}" alt="game-img"></a></p>
 				</li>
 				{% endfor %}
 				</ul>
