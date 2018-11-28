@@ -179,8 +179,8 @@ def gdisconnect():
 
 @app.route('/catalogs/JSON')
 def showcatalogJSON():
-	catalog=session.query(catalog).order_by("catalog.id desc").all()
-	return jsonify(catalog=[i.serialize for i in catalog])
+	catalogJ=session.query(catalog).order_by("catalog.id desc").all()
+	return jsonify(catalog=[i.serialize for i in catalogJ])
 	
 @app.route('/')
 @app.route('/catalog/')
