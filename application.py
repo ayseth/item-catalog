@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
