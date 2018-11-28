@@ -8,6 +8,7 @@
 <!--Side nav-->
   {% include "sidenav.html" %}
 <!--Sidenav end-->
+
 		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
 			<div class="description">
          {% with messages = get_flashed_messages() %}
@@ -26,7 +27,6 @@
         {% endwith %}
 
 
-
 				<h2 class="title3">{{displaycontent.title}}</h2>
 				<hr class="style1">
 				<h4>Description</h4>
@@ -34,14 +34,9 @@
         <a href="{{displaycontent.link}}">
         <img src="{{displaycontent.picture}}" alt="game-img" ></a>
         <br><br>
-
-        <a aria-hidden="true" href="{{url_for('edititem', catalog_title = displaycontent.title)}}">Edit</a> |
-      <a aria-hidden="true" href="{{url_for('deleteitem', catalog_title = displaycontent.title)}}">Delete</a>
-    
       <h4></h4>
-
 			</div>
-  
+
 		</div>
 	</div>
 </div> 

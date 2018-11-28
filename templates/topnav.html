@@ -15,7 +15,17 @@
     <ul class="navbar-nav">
       
     </ul>
-    <button type="button" class="btn btn-light space">LogIn</button>
-    <button type="button" class="btn btn-light space">Register</button>
+    {%if 'username' not in session %}
+<!--     <button type="button" href="{{url_for('showLogin')}}" class="btn btn-light space">LogIn</button> -->
+
+    <a role="button" href="{{url_for('showLogin')}}" class="btn btn-light space">LogIn</a>
+
+    <a role="button" href="{{url_for('showLogin')}}" class="btn btn-light space">Register</a>
+
+
+    {% else %}
+
+   <a role="button" href="{{url_for('gdisconnect')}}" class="btn btn-light space">Logout</a>
+     {% endif %}
   </div>
 </nav>

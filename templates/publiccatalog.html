@@ -1,23 +1,23 @@
 {% include "header.html" %}
 
 
-  <!--top nav-->
+	<!--top nav-->
   {% include "topnav.html" %}
-   <!--top nav end-->
+	 <!--top nav end-->
 
 <!--Side nav-->
   {% include "sidenav.html" %}
 <!--Sidenav end-->
 		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
 			<div class="greyed">
-          
         
-        <h4><a class="extra" href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
         
         <h4></h4>
         
-        
-         {% with messages = get_flashed_messages() %}
+				<h2 class="title3">Latest Items</h2>
+				<hr class="style1">
+
+        {% with messages = get_flashed_messages() %}
         {% if messages %}
         
         <ul>
@@ -31,16 +31,16 @@
         </ul>
         {% endif %}
         {% endwith %}
-				<h2 class="title3"> {{title}} ({{count}})Items </h2>
-        
-				<hr class="style1">
-				<ul>
-          {% for i in listcatalogs %}
-				<li>
-				<h4><a href="{{url_for('showitem', catalog_category = i.category, catalog_title=i.title)}}">{{i.title}}</a></h4>
 
-        <p><a class= "right-img" href="{{url_for('showitem', catalog_category = i.category, catalog_title=i.title)}}">
-          <img src="{{i.cover_pic}}" alt="game-img"></a></p>
+				<ul>
+        {% for catalog in catalogs %}
+
+				<li>
+				<h4><a href="{{url_for('showitem', catalog_category = catalog.category, catalog_title=catalog.title)}}">{{catalog.title}}</a></h4>
+				<p><a href="{{url_for('showitems', catalog_category = catalog.category )}}">({{catalog.category}})</a></p>
+				<p><a class= "right-img" href="{{url_for('showitem', catalog_category = catalog.category, catalog_title=catalog.title)}}">
+					<img src="{{catalog.cover_pic}}" alt="game-img"></p>
+					</a>
 				</li>
 				{% endfor %}
 				</ul>

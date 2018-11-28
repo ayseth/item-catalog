@@ -16,7 +16,7 @@
     <div class="loginBody">
       <div class="form-group">
         <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg" name="username" placeholder="Username...">
+          <input type="text" class="form-control form-control-lg" name="username" placeholder="Username..." disabled>
           <div class="input-group-append">
             <span class="input-group-text p-3"><i class="fa fa-user"></i></span>
           </div>
@@ -24,7 +24,7 @@
       </div>
       <div class="form-group">
         <div class="input-group mb-3">
-          <input type="text" class="form-control form-control-lg" name="email" placeholder="Email...">
+          <input type="text" class="form-control form-control-lg" name="email" placeholder="Email..." disabled>
           <div class="input-group-append">
             <span class="input-group-text p-3"><i class="fa fa-envelope"></i></span>
           </div>
@@ -32,18 +32,32 @@
       </div>
       <div class="form-group">
         <div class="input-group mb-3">
-          <input type="password" class="form-control form-control-lg" name="username" placeholder="Password...">
+          <input type="password" class="form-control form-control-lg" name="username" placeholder="Password..." disabled>
           <div class="input-group-append">
             <span class="input-group-text p-3"><i class="fa fa-lock"></i></span>
           </div>
         </div>
       </div>
 
+      <div id="signinButton">
+          <span class="g-signin"
+            data-scope="openid email"
+            data-clientid="824839725516-nh67uu01fg21aq3dlqagbpm208n18vvc.apps.googleusercontent.com"
+            data-redirecturi="postmessage"
+            data-accesstype="offline"
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+          </span>
+        </div>
+
+<div id="result"></div>
+
       <div class="text-right form-group">
         <a href="#">Forgot password ?</a>
       </div>
       <div class="form-group">
-        <button class="btn btn-block btn-lg btn-primary btn-custom3">Login</button>
+        <button class="btn btn-block btn-lg btn-primary btn-custom3" >Login</button>
       </div>
       <div class="form-group">
         <button class="btn btn-block btn-lg btn-light ">Cancel</button>
@@ -52,5 +66,44 @@
   </div>
 </div>
 
+
+<script>
+function signInCallback(authResult) {
+  if (authResult['code']) {
+
+    // Hide the sign-in button now that the user is authorized
+    $('#signinButton').attr('style', 'display: none');
+
+    // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main restaurants page
+    $.ajax({
+      type: 'POST',
+      url: '/gconnect?state={{STATE}}',
+      processData: false,
+      data: authResult['code'],
+      contentType: 'application/octet-stream; charset=utf-8',
+      success: function(result) {
+        // Handle or verify the server response if necessary.
+        if (result) {
+          $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+         setTimeout(function() {
+          window.location.href = "/catalog";
+         }, 4000);
+
+
+      } else if (authResult['error']) {
+
+    console.log('There was an error: ' + authResult['error']);
+  } else {
+        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+         }
+
+      }
+
+  }); } }
+</script>
+
+
+
+<!--END GOOGLE PLUS SIGN IN -->
 	
 {% include "footer.html" %}

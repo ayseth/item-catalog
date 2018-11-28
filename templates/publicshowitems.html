@@ -11,11 +11,11 @@
 		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
 			<div class="greyed">
           
-        
+      <!--   {%if 'username' not in session %}
         <h4><a class="extra" href="{{url_for('newitem')}}"><i class="fas fa-plus"></i>Add Item</a></h4>
-        
+        {% else %}
         <h4></h4>
-        
+        {% endif %} -->
         
          {% with messages = get_flashed_messages() %}
         {% if messages %}
