@@ -37,6 +37,7 @@ Modern web applications perform a variety of functions and provide amazing featu
   ```
 - Access and test your application by visiting http://localhost:5000/ locally
 
-Do not run database_setup.py as a database with data is included in the repo
+- Access JSON by visiting http://localhost:5000/catalogs/JSON locally
+
 
 
