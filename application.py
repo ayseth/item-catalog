@@ -248,7 +248,10 @@ def newitem():
             user_id=login_session['user_id'],
             )
         session.add(newItem)
-        session.commit()
+        try:
+        	session.commit()
+        except:
+        	session.rollback()
         flash('Item added successfully')
         return redirect(url_for('showcatalog'))
     else:
@@ -299,7 +302,10 @@ def edititem(catalog_title):
         if request.form['cover_pic']:
             editItem.cover_pic = request.form['cover_pic']
         session.add(editItem)
-        session.commit()
+        try:
+        	session.commit()
+        except:
+        	session.rollback()
         flash('Item edited successfully')
         return redirect(url_for('showitems',
                         catalog_category=editItem.category))
@@ -334,6 +340,10 @@ def deleteitem(catalog_title):
                                item=deleteItem)
 
     # return "this will delete item %s" % catalog_title
+
+@app.route('/search')
+def searchitem():
+    return "this will show search items"
 
 if __name__ == '__main__':
     app.secret_key = 'super_secret_key'
