@@ -38,6 +38,7 @@ h4 {
 /*nav bar top*/
 .navbar-light .navbar-nav .nav-link {
     color: #E4C2C6;
+    margin-right: 30px;
 }
 .navbar-light .navbar-brand {
   margin-right: 90px;
@@ -283,26 +284,9 @@ a:hover {
   display: contents;
 }
 
-/*.input-group {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: 700px;
-}
-
-.input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-radius: 55px;
-    margin-left: 85px;
-}
-.input-group-addon>.btn {
-      margin-top: 4px;
-    margin-left: 14px;
+.form-control {
+  width: 600px;
+  border-radius: 40px;
 }
 
 .btn-warning {
