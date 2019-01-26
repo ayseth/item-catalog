@@ -1,0 +1,40 @@
+{% include "header.html" %}
+
+
+	<!--top nav-->
+  {% include "topnav.html" %}
+	 <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="greyed">
+       
+        
+				<h2 class="title3">Search Results </h2>
+				<hr class="style1">
+
+  
+
+				<ul> 
+        {% for catalog in catalogs %}
+
+				<li>
+				<h4><a href="{{url_for('showitem', catalog_category = catalog.category, catalog_title=catalog.title)}}">{{catalog.title}}</a></h4>
+				<p><a href="{{url_for('showitems', catalog_category = catalog.category )}}">({{catalog.category}})</a></p>
+				<p><a class= "right-img" href="{{url_for('showitem', catalog_category = catalog.category, catalog_title=catalog.title)}}">
+					<img src="{{catalog.cover_pic}}" alt="game-img"></p>
+					</a>
+				</li>
+				{% endfor %}
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	
+{% include "footer.html" %}

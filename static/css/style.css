@@ -264,9 +264,9 @@ a:hover {
   height: 50px;
 }
 
-#mysearch:focus + .input-group-addon {
+/*#mysearch:focus + .input-group-addon {
   z-index: 10;
-}
+}*/
 
 .search>.btn:not(:disabled):not(.disabled) {
     cursor: pointer;
@@ -283,7 +283,7 @@ a:hover {
   display: contents;
 }
 
-.input-group {
+/*.input-group {
     position: relative;
     display: -ms-flexbox;
     display: flex;
