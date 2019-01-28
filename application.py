@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, \
     flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import and_
 from flask import session as login_session
 from flask import make_response
 import flask_whooshalchemy as wa
@@ -32,6 +33,7 @@ class User(db.Model):
     name = db.Column(db.String(250), nullable=False)
     email = db.Column(db.String(250), nullable=False)
     picture =db.Column(db.String(250))
+    role = db.Column(db.String(250))
 
 class catalog(db.Model):
 	__searchable__ = ['title', 'content', 'category']
@@ -177,6 +179,8 @@ def getUserID(email):
         return user.id
     except:
         return None
+
+
 
 
 @app.route('/gdisconnect')
@@ -333,6 +337,16 @@ def search():
     if 'username' not in login_session:
         return redirect('/login')
     return render_template('search.html', catalogs=catalogs)
+
+@app.route('/admin/<int:user_id>')
+def admin(user_id):
+    if 'username' not in login_session:
+       return redirect('/login')
+    user = User.query.filter_by(id=user_id).one()
+    if user.role !='admin':
+        return "You're not authorized to view this page"
+    return "welcome admin"
+
 
 if __name__ == '__main__':
 	app.secret_key = 'super_secret_key'
