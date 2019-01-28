@@ -10,7 +10,23 @@
       <li class="nav-item">
         <a class="nav-link" href="{{url_for('showcatalog')}}">Home</a>
 
-     
+      <form class ="form-inline" method="GET" action="search" name="search">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="query" id = "query" placeholder="Search">
+          <div class="input-group-addon" style="margin-left: -34px; z-index: 3; border-radius: 40px; background-color: transparent; border:none;">
+            <button class="btn btn-warning btn-sm search" type="submit" style="border-radius: 20px;" id="search-btn" value="search"></a><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <!-- <div class="input-group">
+          <input class="form-control search" type="submit" placeholder="Search" aria-label="Search" id="mysearch" value="search">
+          <div class="input-group-addon" style="margin-left: -50px; z-index: 3; border-radius: 40px; background-color: transparent; border:none;">
+            <button class="btn btn-warning btn-sm search" type="submit" style="border-radius: 20px;" id="search-btn" value="search"><a href="{{url_for('search')}}"></a><i class="fa fa-search"></i></button>
+          </div>
+      </div>
+ -->    
+
+</form>
     
       </li>
       
