@@ -56,18 +56,20 @@
         <hr class="style1">
         
     
+      {% for i in comment %}
       <div class="media comment-box">
             <div class="media-left">
                 <a href="#">
-                    <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                    <img class="img-responsive user-photo" src="{{i.picture}}" width="50" height="auto">
                 </a>
             </div>
             <div class="media-body">
-                <h4 class="media-heading">Azar Hank</h4>
-                <p>'''</p>
+                <h4 class="media-heading">{{i.name}}</h4>
+                <p>{{i.content}}</p>
               
             </div>
         </div>
+        {% endfor %}
         <h4><a class="comment-icon" href="{{url_for('newcomment', catalog_title = displaycontent.title, catalog_category=displaycontent.category)}}"><i class="fas fa-comment"></i>Add Comment</a></h4>
 
       </div>
