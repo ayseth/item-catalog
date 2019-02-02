@@ -1,0 +1,60 @@
+{% include "header.html" %}
+
+
+  <!--top nav-->
+  {% include "topnav.html" %}
+   <!--top nav end-->
+
+<!--Side nav-->
+  {% include "sidenav.html" %}
+<!--Sidenav end-->
+
+		<div class = "col-md-10 d-none d-md-block bg-custom2 ">
+			<div class="content">
+				<h2 class="title3">Add New Comment</h2>
+				<hr class="style1">
+
+        <form action="#" class="container was-validated" novalidate="" id="needs-validation" method = 'POST'>
+				
+       
+      
+      <!--   <h4 class="category">Description</h4> -->
+        <h4><label class="form-control-label category" for="cmt">Comment</label></h4>
+
+        <textarea name="comment" cols="20" rows="5" class="form-control" id="cmt" required=""></textarea>
+        
+
+       
+
+    <div class="bd">
+    <input class="btn btn-primary btn-custom" type='submit' value='Add'>
+    
+    <a class="btn btn-light" href="{{url_for('showcatalog')}}">Cancel</a>
+    </div>
+
+    
+	</form>
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+	
+{% include "footer.html" %}
+
+<script>
+    (function() {
+  "use strict";
+  window.addEventListener("load", function() {
+    var form = document.getElementById("needs-validation");
+    form.addEventListener("submit", function(event) {
+      if (form.checkValidity() == false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add("was-validated");
+    }, false);
+  }, false);
+}());
+</script>

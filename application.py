@@ -14,12 +14,12 @@ import json
 import httplib2
 import requests
 
-app = Flask(__name__)
+
 
 CLIENT_ID = json.loads(open('client_secrets.json', 'r').read())['web'
                                                                 ]['client_id']
 APPLICATION_NAME = 'Games Catalog Application'
-
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///catalog2.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 app.config['WHOOSH_BASE']='whoosh'
@@ -58,6 +58,18 @@ class catalog(db.Model):
 		'picture' : self.picture,
 		
 		}
+
+class comments(db.Model):
+    __tablename__='comments'
+
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    catalog_id = db.Column(db.Integer, db.ForeignKey('catalog.id'))
+    name = db.Column(db.String(250), nullable=False)
+    email = db.Column(db.String(250), nullable=False)
+    content = db.Column(db.String(1000))
+    status = db.Column(db.String(250))
+
 
 wa.whoosh_index(app, catalog)
 
@@ -337,6 +349,28 @@ def search():
     if 'username' not in login_session:
         return redirect('/login')
     return render_template('search.html', catalogs=catalogs)
+
+@app.route('/catalog/<string:catalog_category>/<string:catalog_title>/comment', methods=['GET', 'POST'])
+def newcomment(catalog_category, catalog_title):
+    if 'username' not in login_session:
+        return redirect('/login')
+    cat_id=catalog.query.filter_by(title=catalog_title).one()
+    if request.method == 'POST':
+        newcomment = comments(
+            user_id=login_session['user_id'],
+            catalog_id=cat_id.id,
+            name=login_session['username'],
+            email=login_session['email'],
+            content=request.form['comment'],
+            status="unapproved"
+            )
+        db.session.add(newcomment)
+        db.session.commit()
+        flash('Comment waiting approval')
+        return redirect(url_for('showitems', catalog_category=cat_id.category))
+    else:
+        return render_template('addcomment.html')
+
 
 @app.route('/admin/<int:user_id>')
 def admin(user_id):
