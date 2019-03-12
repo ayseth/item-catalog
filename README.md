@@ -39,5 +39,11 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 - Access JSON by visiting http://localhost:5000/catalogs/JSON locally
 
+### Screenshots
+
+Login Page 
+![GitHub Logo](/screenshots/login.png)
+Format: ![Alt Text](url)
+
 
 
