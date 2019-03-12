@@ -43,8 +43,7 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 Login Page 
 
-
-![](/screenshots/login.png =250x)
+![test image size](/screenshots/login.png){:height="50%" width="50%"}
 
 
 
