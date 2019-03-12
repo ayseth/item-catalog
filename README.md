@@ -42,8 +42,8 @@ Modern web applications perform a variety of functions and provide amazing featu
 ### Screenshots
 
 Login Page 
-![GitHub Logo](/screenshots/login.png)
-Format: ![Alt Text](url)
+![GitHub Logo](/screenshots/login.png | width=100)
+
 
 
 
