@@ -41,12 +41,45 @@ Modern web applications perform a variety of functions and provide amazing featu
 
 ### Screenshots
 
-Login Page 
-
-![test image size](/screenshots/login.png){:height="50%" width="50%"}
+- Login Page/ logged out
 
 <img src="/screenshots/login.png" 
-alt="IMAGE ALT TEXT HERE"  height="250 px" border="10" />
+alt="Login Page"  height="250 px" border="10" />
+<img src="/screenshots/Logged_out.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+- Comments page
+<img src="/screenshots/Add_comment.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+<img src="/screenshots/Comment_Added.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+- Add New Item
+
+<img src="/screenshots/Add_new_info_added.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+<img src="/screenshots/Add_new_item.png" 
+alt="Login Page"  height="250 px" border="10" />
+ 
+ - Delete Item
+ 
+ <img src="/screenshots/Delete_item_ask.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+<img src="/screenshots/Item_del_success.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+- Edit Item
+<img src="/screenshots/Edit_item.png" 
+alt="Login Page"  height="250 px" border="10" />
+<img src="/screenshots/Edit_item2.png" 
+alt="Login Page"  height="250 px" border="10" />
+
+
+
+
 
 
 
