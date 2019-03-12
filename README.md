@@ -45,6 +45,9 @@ Login Page
 
 ![test image size](/screenshots/login.png){:height="50%" width="50%"}
 
+<img src="/screenshots/login.png" 
+alt="IMAGE ALT TEXT HERE"  height="250 px" border="10" />
+
 
 
 
