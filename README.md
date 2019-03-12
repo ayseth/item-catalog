@@ -51,7 +51,6 @@ alt="Login Page"  height="250 px" border="10" />
 - Comments page
 <img src="/screenshots/Add_comment.png" 
 alt="Login Page"  height="250 px" border="10" />
-
 <img src="/screenshots/Comment_Added.png" 
 alt="Login Page"  height="250 px" border="10" />
 
@@ -59,7 +58,6 @@ alt="Login Page"  height="250 px" border="10" />
 
 <img src="/screenshots/Add_new_info_added.png" 
 alt="Login Page"  height="250 px" border="10" />
-
 <img src="/screenshots/Add_new_item.png" 
 alt="Login Page"  height="250 px" border="10" />
  
@@ -67,7 +65,6 @@ alt="Login Page"  height="250 px" border="10" />
  
  <img src="/screenshots/Delete_item_ask.png" 
 alt="Login Page"  height="250 px" border="10" />
-
 <img src="/screenshots/Item_del_success.png" 
 alt="Login Page"  height="250 px" border="10" />
 
