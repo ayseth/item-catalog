@@ -291,6 +291,10 @@ a:hover {
   border-radius: 40px;
 }
 
+.was-validated .form-control {
+   border-radius: 0px;
+}
+
 .btn-warning {
     color: #212529;
     background-color: #CD9FCC;
@@ -385,3 +389,38 @@ a:hover {
 .comment-icon>i {
   padding: 5px;
 }
+
+/*button*/
+
+
+.google:focus {
+    background-color: rgba(187,192,196,0);
+   
+}
+
+.google:hover {
+  
+    background-color: #e9e9e9;
+}
+.google {
+    border-color: #adb3b9;
+    box-shadow: 0 0 0 0 rgba(145,153,161,0);
+    color: #49516F;
+        margin-right: 0;
+    margin-left: 0;
+    margin: 4px;
+        background-image: none;
+        position: relative;
+    padding: .8em;
+    border: 1px solid ;
+    border-radius: 3px;
+    text-align: center !important;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15384615;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*-----------------------------------*/
