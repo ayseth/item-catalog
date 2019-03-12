@@ -233,9 +233,11 @@ def showcatalogJSON():
 @app.route('/')
 @app.route('/catalog/')
 def showcatalog():
-	catalogs = catalog.query.order_by('catalog.id desc'
-                                               ).limit(5)
-	return render_template('catalog.html', catalogs=catalogs)
+    catalogs = catalog.query.order_by('catalog.id desc').limit(5)
+    if 'username' not in login_session:
+        return render_template('publiccatalog.html', catalogs=catalogs)
+    else:
+        return render_template('catalog.html', catalogs=catalogs)
 
 @app.route('/catalog/new', methods=['GET', 'POST'])
 def newitem():
