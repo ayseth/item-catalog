@@ -87,14 +87,14 @@ alt="Login Page"  height="250 px" border="10" />
 
 <img src="/screenshots/search_result_hunt.png" 
 alt="Login Page"  height="250 px" border="10" />
-<img src="/screenshots/search_result_mmo.png" 
+<img src="/screenshots/Search_result_mmo.png" 
 alt="Login Page"  height="250 px" border="10" />
 
 - Side nav pages
 
 <img src="/screenshots/side_nav_action.png" 
 alt="Login Page"  height="250 px" border="10" />
-<img src="/screenshots/side_nav_mmo.png" 
+<img src="/screenshots/Side_nav_mmo.png" 
 alt="Login Page"  height="250 px" border="10" />
 
 
